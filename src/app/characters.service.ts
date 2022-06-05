@@ -16,6 +16,11 @@ export class CharacterService {
     }
 
 
-    getDatails(id:number){
-        return this.http.get<Character>(`${this.baseUrl}/${id})
-    }
+    getPokemon(namePokemon:string){
+        return this.http.get(this.baseUrl + "/"+namePokemon);
+      }
+     
+      getAll(){
+        return this.http.get(this.baseUrl);
+      }
+}
