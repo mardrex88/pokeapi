@@ -3,3 +3,10 @@
 <button (click)="search()">Enviar</button>
 
 <img src="{{ urlImage }}" alt="Foto Pokemon">
+
+<div *ngFor="let item of data let i = index">
+    <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ i + 1 }}.png' alt="Foto Pokemon">
+   <a (click)="searchByName(item.name)"> {{item.name}} </a> 
+    <p>{{ i }} </p>
+</div>
+
